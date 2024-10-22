@@ -1,0 +1,6 @@
+zmienna1 = float(12)
+zmienna2 = int(34)
+zmienna3 = float(1.33)
+zmienna4 = str("ananas")
+zmienna5 = str("szynka")
+zmienna6 = complex(3,4)
