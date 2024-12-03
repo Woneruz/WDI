@@ -109,7 +109,7 @@ def main():
 
     # Sprawdzanie czy hetmany się szachują
     if czy_szach():
-        print("Żadne dwa hetmany się nie szachują ✨")
+        print("Żadne hetmany się nie szachują ✨")
     else:
         print("Hetmany się szachują 😯😯")
 
