@@ -2,7 +2,7 @@ import random
 
 # Rozmiar szachownicy i lista przechowująca pozycje hetmanów
 rozmiar_szachownicy = 100
-hetmany = []  # Lista pozycji hetmanów [(w1, k1), (w2, k2), ...]
+hetmany = []  # Lista pozycji hetmanów [(w1, k1), (w2, k2), ...] - jak w poleceniu
 
 # Funkcja dodająca hetmana na szachownicę
 def dodaj_hetmana(wiersz, kolumna):
