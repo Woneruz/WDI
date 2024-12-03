@@ -36,7 +36,7 @@ def czy_szach():
                 h1[1] == h2[1] or  # Ta sama kolumna
                 abs(h1[0] - h2[0]) == abs(h1[1] - h2[1])):  # Ta sama przekątna
                 return False  # Hetmany się szachują
-    return True  # Żadne dwa hetmany się nie szachują
+    return True  # Żadne hetmany się nie szachują
 
 # Funkcja wizualizująca szachownicę
 def wizualizuj(plik="szachownica.txt"):
@@ -80,6 +80,9 @@ def main():
             if n >= 100:
                 print("Liczba hetmanów musi być mniejsza niż 100.")
                 return
+            if n <= 0:
+                print("Liczba hetmanów musi być większa niż 0.")
+                return
         else:
             print("Niepoprawny wybór!")
             return
@@ -88,6 +91,10 @@ def main():
     elif wybor == "2":
         # Podawanie liczbę i pozycje hetmanów
         n = int(input("Podaj liczbę hetmanów: "))
+        if n < 1 or n > 100:  # Sprawdzanie, czy liczba hetmanów jest poprawna
+            print("Liczba hetmanów musi być od 1 do 100.")
+            return  # Przerywamy, jeśli liczba hetmanów jest niepoprawna
+
         for i in range(n):
             while True:
                 try:
