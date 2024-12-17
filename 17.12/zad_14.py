@@ -3,12 +3,12 @@ import string
 import time
 
 def generuj_losowy_ciag(dlugosc):
-    """Generuje losowy ciąg o zadanej długości."""
+    # Generuje losowy ciąg o zadanej długości
     znaki = string.ascii_letters + string.digits + string.punctuation
     return ''.join(random.choice(znaki) for _ in range(dlugosc))
 
 def licz_rekurencyjnie(dane, warunek, indeks=0, liczba=0):
-    """Rekurencyjnie liczy elementy spełniające warunek."""
+    # Rekurencyjnie liczy elementy spełniające warunek
     if indeks == len(dane):
         return liczba
     if warunek(dane[indeks]):
@@ -16,7 +16,7 @@ def licz_rekurencyjnie(dane, warunek, indeks=0, liczba=0):
     return licz_rekurencyjnie(dane, warunek, indeks + 1, liczba)
 
 def licz_iteracyjnie(dane, warunek):
-    """Iteracyjnie liczy elementy spełniające warunek."""
+    # Iteracyjnie liczy elementy spełniające warunek
     liczba = 0
     for znak in dane:
         if warunek(znak):
@@ -24,19 +24,19 @@ def licz_iteracyjnie(dane, warunek):
     return liczba
 
 def czy_samogloska(znak):
-    """Sprawdza, czy znak jest samogłoską."""
+    # Sprawdza, czy znak jest samogłoską
     return znak.lower() in 'aeiou'
 
 def czy_spolgloska(znak):
-    """Sprawdza, czy znak jest spółgłoską."""
+   # Sprawdza, czy znak jest spółgłoską
     return znak.isalpha() and not czy_samogloska(znak)
 
 def czy_cyfra(znak):
-    """Sprawdza, czy znak jest cyfrą."""
+    # Sprawdza, czy znak jest cyfrą
     return znak.isdigit()
 
 def czy_znak_specjalny(znak):
-    """Sprawdza, czy znak jest znakiem specjalnym."""
+    # Sprawdza, czy znak jest znakiem specjalnym
     return not znak.isalnum()
 
 def main():
